@@ -100,9 +100,11 @@
       </h3>
 
 
-      <button class="btn-about" onclick="download()">
-        Guardar Contacto
-      </button>
+
+
+
+      <a class="btn-about" href="https://wa.link/pw80mu" target="_blank"> Contáctame
+      </a>
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js">
       </script>
@@ -151,26 +153,7 @@
 
 </body>
 
-<script>
-  function download() {
-    axios({
-      url: 'Kevin Ross.vcf',
-      method: 'GET',
-      responseType: 'blob'
-    })
-      .then((response) => {
-        const url = window.URL
-          .createObjectURL(new Blob([response.data]));
-        const link = document.createElement('a');
-        link.href = url;
-        link.setAttribute('download', 'contacto.csv');
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-      })
-  }
 
-</script>
 
 
 </html>
